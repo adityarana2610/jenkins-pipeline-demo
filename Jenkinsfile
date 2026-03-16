@@ -11,19 +11,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'python app.py'
+                bat 'py app.py'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'pytest test_app.py'
+                bat 'py -m pytest test_app.py'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deployment successful'
+                echo 'Deployment Successful'
             }
         }
     }
