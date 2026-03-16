@@ -11,13 +11,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'py app.py'
+                bat '"C:\\Users\\Aditya Rana\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" app.py'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'py -m pytest test_app.py'
+                bat '"C:\\Users\\Aditya Rana\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pytest test_app.py'
             }
         }
 
